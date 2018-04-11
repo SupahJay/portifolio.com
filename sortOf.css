@@ -1,6 +1,8 @@
 
 *{margin:0;
-    box-sizing:border-box}
+    box-sizing:border-box;
+font-family:open sans;
+}
 
 @keyframes colorfull {
     0% {background-color:red;}
