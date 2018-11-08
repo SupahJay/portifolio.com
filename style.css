@@ -5,7 +5,7 @@
 :-ms-input-placeholder {font-family: open sans; }
 ::placeholder {font-family: open sans; }
 body {font-family: quicksand, open sans, Arial, Helvetica, sans-serif; background-color: #13beef; color: #232323; text-align: center; margin: 0; }
-body main {background: white; margin: 2.5vw; padding: 4% 9%; border-radius: 5px}
+body main {background: white; margin: 2.5vmin /* before was vw */; padding: 4% 5.5vw; border-radius: 5px}
 details {border: solid #dadada 1px; border-radius: 5px; padding: 5px; outline-offset: 3px; }
 summary {margin: 5px; }
 summary:focus {outline-offset: 1rem; outline: none}
@@ -16,7 +16,8 @@ small {max-width: 500px; display: block}
 h1,h2,h3 {font-family: "Ubuntu", quicksand, open sans; }
 h1 {font-size: 3em; margin: 10px}
 h2 {font-size: 2em; margin-top: 0}
-p {font-size: 1.05rem; text-align: left}
+strong{color:#343434}
+p {font-size: 1.1rem; text-align: left;font-family:roboto;color:#464646}
 a {text-decoration: none; }
 /* style any link without class */
 a:not([class]) {position: relative; -webkit-transform: translate(0px); transform: translate(0px); color: black}
@@ -24,7 +25,7 @@ a:not([class])::after {content: ""; height: 2.3px; background-color: #5f02b6; po
 a:not([class]):hover {color: white}
 a:not([class]):hover::after {-webkit-transform: scale(1.08, .9); transform: scale(1.08, .9); height: 100%; left: 0; right: 0; bottom: 0; }
 /* ======= Style Templates ====== */
-.chip {padding: .33em 1.75em; display: inline-block; background: #c4f03f; color: white; border-radius: 50px; margin: 10px auto; }
+.chip {padding: .33em 1.75em; display: inline-block; background: #1dc750; color: white; border-radius: 50px; margin: 10px auto; }
 .chip:hover {letter-spacing: 1px; text-shadow: white 0px 0px 8px; -webkit-transition: .3s; transition: .3s}
 .cta {padding: 1em 2em; display: inline-block; border: 0; -webkit-box-shadow: 2px 2px 8px 0px #0000002c; box-shadow: 2px 2px 8px 0px #0000002c}
 .cta:hover {-webkit-transition: .5s; transition: .5s; padding: 1.2em 2em; letter-spacing: 1px}
@@ -39,14 +40,15 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 .icon {margin: 10px}
 .icon svg {width: 3rem; height: 3rem; -webkit-filter: grayscale(1); filter: grayscale(1); -webkit-transition: .05s linear; transition: .05s linear}
 .icon:hover svg {-webkit-filter: none; filter: none}
-.center>p {text-align: center}
+.center>p, .center {text-align: center}
 /* ======= Inner Styling ====== */
 /* intro */
-.top {max-width: 700px; margin: 7vh auto; text-align: center; }
-.top p {text-align: center}
-.top:first-of-type p {text-align: justify; margin: 1rem}
+.top {margin: 7vh auto;max-width:55rem}
+.top p:not(:first) {text-align: justify; margin: 1rem}
+/* outro btw */
+.botton{max-width: 700px;margin:auto}
 /* Informative Sections */
-.info {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-flow: wrap; flex-flow: wrap; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; margin: 25vh 0; }
+.info {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-flow: wrap; flex-flow: wrap; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; margin: calc(18vmin + 1rem) 0; }
 .info>a {width: 430px; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; height: 350px; overflow: hidden; display: block; background: #04bb75; /* margin: 10px auto; */
  border-radius: 5px; background-size: cover}
 .info:nth-of-type(1) .peek {background-image: url(images/index.png); }
@@ -89,7 +91,8 @@ a.hide {-webkit-animation: .8s smoo forwards ease-out; animation: .8s smoo forwa
 @keyframes inside {0% {opacity: 0 }
  100% {opacity: 1 }
 }
-@supports(display: grid) {.info {display: grid; grid-template-columns: 1.1fr 1fr; grid-column-gap: 3%; justify-items: stretch }
+@supports(display: grid) {
+.info {display: grid; grid-template-columns: 1.1fr 1fr; grid-column-gap: 3%; justify-items: stretch }
  .AboutMe {margin: 0 0; width: 100% }
  .info>a {width: 100%; }
  @media (max-width: 1030px) {.info {grid-template-columns: 1fr; }
