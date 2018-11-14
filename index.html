@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>👌🐱‍🐉Portifolio do Moabe👌🐱‍🐉</title>
+    <title>Moabe On The Web</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <!-- <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192"> -->
+    <!-- <link rel="icon" type="image/png" href="favicon-512x512.png" sizes="512x512"> -->
     <link href="style.css" rel="stylesheet" type="text/css">
     <!-- This code only runs on IE so it's ok to put on the head tag -->
     <script>
@@ -51,7 +55,7 @@
         <section class="info">
             <a href="#programming" class="peek"></a>
             <div class="AboutMe">
-                <a href="#programming" class="header-link"><h3>Javascript</h3></a>
+                <a href="#programming" class="header-link"><h3>Programação / Javascript</h3></a>
                 <p>Todos os códigos usados no meu site são feitos por mim mesmo com o uso de Vanilla Javascript. Por também ser UX designer sempre tento criar <strong>códigos super rápidos, com o mínimo de libraries e com a maior compatibilidade possível.</strong></p>
                 <a href="#programming" class="chip">Ver mais</a>
             </div>
@@ -91,17 +95,18 @@
             <article class="float_page" id="programming">
                 <div>
                     <h1>Programação</h1>
+                    <p>Como sou front-end developer eu programo principalmente em JavaScript, também sei um pouquinho de PHP, crio templates pra WordPress e sei usar alguns geradores de sites estáticos como Jekyll.</p>
+                    <p>Eu ainda pretendo aprender outras linguagens de programação mais tarde, como Python, C# e Java. Elas vão me ajudar a desenvolver programas back-end mais complexos, como web-apps ou programas de pc que interagem com servers.</p>
+                    <p>Mas antes de começar á estudar elas vou continuar focando em JavaScript e estudando libraries famosas atualmente como React, Vue.Js, Node.js e etc.</p>
                     <h2>Javascript</h2>
                     <p>
                         Eu programo com as ferramentas mais novas da ES5 e ES6, compiladas e encurtas pelo Babel.js por maior compatibilidade e menor tempo de download.
                         <br>Isso faz com que todos os navegadores, até algumas versões mais antigas do Internet Explorer, possam usufruir um código quase identico sem a nescessidade de usar libraries extras(como Jquery) que podem acrescentar peso desnecessário. O cliente recebe um site mais rápido, leve e compativel.
                     </p>
-                    <p>Aqui estão algums dos meus projetos:</p>
-
                     <h3>Jekyll(Ruby framework)</h3>
-                    <p>Por ser um gerador de sites estáticos Jekyll não se demonstra viavel para a maioria de projetos mas toda vez que é utilizado se destaca na velocidade e segurança inalcançaveis por sites programados com back-end completo.</p>
+                    <p>Por ser um gerador de sites estáticos Jekyll não se demonstra viável para a qualquer projeto mas toda vez que é utilizado se destaca na velocidade e segurança inalcançáveis por sites programados com back-end completo.</p>
                     <details>
-                        <summary>Pode se usar Jekyll quando:</summary>
+                        <summary>Pode se utilizar Jekyll quando:</summary>
                         <ul>
                             <li>A empresa quiser economizar com o server e fazer com que ele não rode dados</li>
                             <li>O site seja simples, com conteudo relativo ao conteudo do próprio site e não relativo á cada usuário</li>
@@ -109,10 +114,7 @@
                             <li>A empresa queira muita segurança na página(Não dá pra hackear Jekyll)</li>
                         </ul>
                     </details>
-                    <p>
-                        Na perspectiva do cliente dá pra economizar muito ao pagar por um host com menor espaço ou até de graça pelo GitHub Pages. Na da empresa dá pra criar sites que se destacam na velocidade e no preço.
-                        <br>
-                    </p>
+                    <p>No lado do cliente dá pra economizar muito ao pagar por um host com menor espaço ou até de graça pelo GitHub Pages. No da empresa dá pra criar sites que se destacam na velocidade, segurança e preço.</p>
                     <details tab="0">
                         <summary tab="0">Como um site com Jekyll se parece.</summary>
                         <h3>Antes</h3>
@@ -124,24 +126,27 @@
                         <p>A diferença de com um sistema back-end é que ele ficaria rodando toda hora, o que o deixa mais lento, mas Jekyll só roda uma vez: quando o cliente posta algo novo, a partir daí o server só tem que entregar os arquivos.</p>
                     </details>
                     <p>No site do <a href="https://jekyllrb.com/showcase/">Jekyll</a> eles demonstram sites famosos que usam Jekyll, incluindo: <a href="https://dev.twitch.tv/">Twitch Developers</a>, <a href="https://devices.netflix.com/en/">Netflix
-                            Devices</a>, <a href="https://sketchapp.com/">sketch App</a>, entre outros. O <a href="https://www.siteleaf.com/gallery/">Siteleaf</a> também tem uma galeria de sites Jekyll.</p>
-                    <p>Eu ainda pretendo aprender outras linguagens de programação mais tarde, como Python, C# e Java, elas me ajudarão a desenvolver programas back-end mais complexos, como web-apps e programas que se conectam com servers.</p>
+                            Devices</a>, <a href="https://sketchapp.com/">sketch App</a>, entre outros. O <a href="https://www.siteleaf.com/gallery/">Siteleaf</a> também tem uma galeria de sites em Jekyll.</p>
+                            
                     <h3>Paradigmas</h3>
-                    <p>
-                        Eu sei programar em OOP, functional programming e talvez use outro paradigma dependendo do projeto. A ideia de não ceder a sua vida á somente um paradigma e sim de acordo com o projeto é a mais recomendada atualmente. Antigamente OOP era recomendada pelos especialistas para qualquer projeto como norma, hoje a recomendação é ter conciencia de como escrever cada projeto individualmente.
-                        <br> Isso faz com que meus programas sempre rodem o mais rápido possivel em qualquer dispositivo</p>
+                    <p>Antigamente OOP era o rei absoluto na programação, mas hoje em dia a regra que vale é usar o paradigma que convém a cada projeto. Com a evolução do JavaScript, que fica mais poderoso a cada versão, o paradigma mais usado no Vanilla.js é o functional programming que diminui muito o código comparado com OOP. Dependendo do projeto eu programo em OOP, Functional Programming ou talvez em outro paradigma se for necessário.</p>
                 </div>
             </article>
             <article class="float_page" id="codigo">
                 <div>
                     <h1>Código e design de código.</h1>
-                    <p>Meu código em geral é criado vizando a leveza e a funcionalidade. De HTML á Javascript eu sempre penso em qual será a forma mais curta, que renderiza da melhor forma em todos aparelhos.<br>Eu geralmente uso fallbacks quando nessesário e sempre estou atento á dicas dos melhores profissionais na área na internet, isso me ajuda á ser mais preciso no que eu tenho que melhorar e também a me deixar atento com a qualidade do código-design no mundo.<br>
-                    Eu implemento <strong>KISS</strong>, <strong>DRY</strong> e <strong>YAGNI</strong> (ou qualquer outra sigla que me ajude nos meus códigos :P) por exemplo: Nessa página(a que flutua) ao invéz de criar várias para cada subtema e receber elas por AJAX aqui eu simplismente escrevi cada pagina em HTML como string e adicionei elas aqui com Document.appendChild, o que é totalmente YAGNI e KISS, embora isso não seja a mais profissional e muito menos user friendly seguindo as necesidades desse projeto essa tecnica totalmente dá conta do trabalho, é mais rapida de implementar e é facilmente escalavel.<br>
-                    Aqui estão algumas formas de como eu posso adicionar esses pricipios da programação nos vários tipos de código que eu escrevo:</p>
+                    <p>Meu código em geral é criado visando a leveza e a funcionalidade. De HTML á Javascript eu sempre penso em qual será a forma mais curta, que renderiza da melhor forma em todos aparelhos. Ultimamente eu comecei a implementar ferramentas pra minify e polyfill meu código.</p>
+
+                    <p>Eu implemento <strong>KISS</strong>, <strong>DRY</strong> e <strong>YAGNI</strong> (ou qualquer outra sigla que me ajude nos meus códigos :P). Por exemplo nessa página (a que flutua) ao invés de criar várias para cada subtema e receber elas aqui por AJAX eu simplesmente escrevi escrevi cada página em HTML, escondi elas com CSS a não ser que essa página fosse chamada por um dos botões. Tudo com uma linha de CSS. O que é totalmente YAGNI e KISS, embora isso não seja a forma mais profissional, seguindo as necessidades desse projeto, essa técnica totalmente dá conta do trabalho, é mais rápida de implementar e é facilmente escalável.</p>
+
+                    <p>Aqui estão algumas formas de como eu posso adicionar esses princípios da programação nos vários tipos de código que eu escrevo:</p>
+
                     <ul>
-                        <li>KISS:Na estrutura dos meus HTML/Css eu implemento o Keep It Simple Stupid na organização dos selectors. Existem muitas estruturas recomendadas mas geralmente elas ou são tão óbvias que nem dá pra citar elas ou tem alguma falhas que acabaria complicando o desenvolvimento do site. O KISS é simplismente perfeito por nem ser intrometido nem vago demais, graças á ele acabei desenvolvendo meu próprio estilo de organização que acaba sendo muito simples e curto.</li>
-                        <li>DRY: O principio mais simples e meu favorito, o classico Don't Repeat Yourself vai totalmente de mãos dadas com Functional programming e super ajuda a criar um código mais legivel e simples.</li>
-                        <li>YAGNI: You Ain't Gonna Need It. YAGNI é o prncipio da programação que diz que não se deve programar funções desnessesárias, a ideia é que geralmente nós programadores quando vamos programar temos todo tipo de ideia sobre que funcionalidades adicionar o que pode acabar atrazando o projeto e complicando demais algo que era pra ser simples(KISS).</li>
+                        <li><strong>KISS:</strong> Na estrutura dos meus HTML/Css eu implemento o Keep It Simple Stupid na organização dos selectors. Existem muitas estruturas recomendadas mas geralmente elas ou são tão óbvias que nem dá pra citar elas ou tem alguma falhas que acabaria complicando o desenvolvimento do site. O KISS é perfeito por nem ser intrometido nem vago demais, graças á ele acabei desenvolvendo meu próprio estilo de organização que acaba sendo muito simples e curto.</li>
+
+                        <li><strong>DRY:</strong> O principio mais simples e meu favorito, o clássico Don't Repeat Yourself vai de mãos dadas com Functional Programming e ajuda muito á criar código mais legível e simples.</li>
+
+                        <li><strong>YAGNI:</strong> You Ain't Gonna Need It. YAGNI é o principio da programação que diz que não se deve programar funções desnecessárias, a ideia é que geralmente nós programadores quando vamos programar temos todo tipo de ideia sobre que funcionalidades adicionar o que pode acabar atrasando o projeto e complicando demais algo que era pra ser simples(KISS).</li>
                     </ul>
                 </div>
             </article>

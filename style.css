@@ -75,7 +75,7 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 li a h3 {display: inline-block; margin: auto 1rem}
 /*------ Footer Page -----*/
 footer.links {display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; color: white; }
-footer.links .links {margin: auto; padding: 0 2rem; color: #f0f0f0}
+footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff}
 /* ======= Media Queries & Animation Section ====== */
 /*------ animating tags -----*/
 a.hide {-webkit-animation: .8s smoo forwards ease-out; animation: .8s smoo forwards ease-out}
