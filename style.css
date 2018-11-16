@@ -14,10 +14,11 @@ a,input[type=submit] {cursor: pointer; }
 small {max-width: 500px; display: block}
 /*------ Text styling -----*/
 h1,h2,h3 {font-family: "Ubuntu", quicksand, open sans; }
-h1 {font-size: 3em; margin: 10px}
-h2 {font-size: 2em; margin-top: 0}
+h1 {font-size: 3em;font-size: calc(3rem + .8vmin); margin: 10px}
+h2 {font-size: 2em;font-size: calc(1.5rem + .75vmin); margin-top: 0}
+h3 {font-size: calc(1.18rem + .6vmin)}
 strong{color:#343434}
-p {font-size: 1.1rem; text-align: left;font-family:roboto;color:#464646}
+p {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: left;font-family:roboto;color:#434343}
 a {text-decoration: none; }
 /* style any link without class */
 :not(.gist-meta)> a:not([class]) {position: relative; -webkit-transform: translate(0px); transform: translate(0px); color: black}
@@ -37,9 +38,9 @@ a {text-decoration: none; }
 .ghost:active {-webkit-transform: translate(0px, 0px); transform: translate(0px, 0px)}
 .seamless {padding: 10px; border: solid #ddd 1px; display: inline-block; border-radius: 3px; font-size: .9rem; min-width: 200px; width: 45%}
 textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open sans; display: block; resize: vertical}
-.icon {margin: 10px}
+.icon {margin: 10px; outline: none}
 .icon svg {width: 3rem; height: 3rem; -webkit-filter: grayscale(1); filter: grayscale(1); -webkit-transition: .05s linear; transition: .05s linear}
-.icon:hover svg {-webkit-filter: none; filter: none}
+.icon:hover svg, .icon:focus svg {-webkit-filter: none; filter: none}
 .center>p, .center {text-align: center}
 /* ======= Inner Styling ====== */
 /* intro */
@@ -51,7 +52,7 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 .info {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-flow: wrap; flex-flow: wrap; -ms-flex-negative: 0; flex-shrink: 0; -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; margin: calc(18vmin + 1rem) 0; }
 .info>a {width: 430px; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; height: 350px; overflow: hidden; display: block; background: #04bb75; /* margin: 10px auto; */
  border-radius: 5px; background-size: cover}
- .header-link{color:black}
+ .header-link{color:#323232}
 .info:nth-of-type(1) .peek {background-image: url(images/index.png); }
 .info:nth-of-type(2) .peek {background-image: url(images/js.png); }
 .info:nth-of-type(3) .peek {background-image: url(images/css.png); }
@@ -71,7 +72,8 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 .email>* {margin: 5px auto}
 .options {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; -ms-flex-flow: wrap; flex-flow: wrap; padding: 1rem; }
 /* ------- About me Page ------ */
-.presentation li p {margin: 1rem}
+#truu{float:right;width:25vmax;height:55vh;min-width:500px;background:blueviolet;margin:.5rem 1rem;display:block;border-radius:5px;}
+.list li p {margin: 1rem}
 li a h3 {display: inline-block; margin: auto 1rem}
 /*------ Footer Page -----*/
 footer.links {display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; color: white; }
@@ -98,8 +100,10 @@ a.hide {-webkit-animation: .8s smoo forwards ease-out; animation: .8s smoo forwa
 .info {display: grid; grid-template-columns: 1.1fr 1fr; grid-column-gap: 3%; justify-items: stretch }
  .AboutMe {margin: 0 0; width: 100% }
  .info>a {width: 100%; }
- @media (max-width: 1030px) {.info {grid-template-columns: 1fr; }
- .seamless {display: block; min-width: initial; width: 90% }
+ @media (max-width: 1030px) {
+    .info {grid-template-columns: 1fr; }
+    .seamless {display: block; min-width: initial; width: 90% }
+    #truu{ float: none; width: auto; border-radius: 0; min-width: auto; }
  }
 }
 /*------ Animations -----*/
