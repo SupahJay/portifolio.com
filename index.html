@@ -153,12 +153,36 @@
         </div>
     </main>
     <a href="#" class="menu-container" target="_self">
-        <span id="menu"></span>
+        <span id="menu" class=""></span>
     </a>
-    <footer class="links">
+    <div id="nav">
+        <a href="about" class="r">
+            <h2>Home</h2>
+        </a><a href="" class="r">
+            <h2>Sobre Mim</h2>
+        </a>
+        <a href="" class="r">
+            <h2>Portifolio</h2>
+        </a>
+        <a href="" class="r">
+            <h2>Contato</h2>
+        </a>
+    </div>
+    <!-- <footer class="links">
         <a href="about" class="links"><h2>Sobre mim</h2></a>
         <a href="#" class="links"><h2>Media</h2></a>
-    </footer>
+    </footer> -->
+    <script>    
+        var menu= document.querySelector(".menu-container");
+        var nav = document.getElementById("nav");
+        window.addEventListener("click", function(click){
+            if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
+                click.preventDefault();
+                menu.firstElementChild.classList.toggle("x");
+                menu.classList.toggle("x");
+            }
+        })
+    </script>
     <script src="js.js"></script>
 </body>
 </html>

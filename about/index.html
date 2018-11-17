@@ -46,8 +46,32 @@
         </ul>
     </aside>
     <a href="#" class="menu-container" target="_self">
-        <span id="menu"></span>
+        <span id="menu" class=""></span>
     </a>
+    <div id="nav">
+        <a href="../" class="r">
+            <h2>Home</h2>
+        </a><a href="" class="r">
+            <h2>Sobre Mim</h2>
+        </a>
+        <a href="../portifolio" class="r">
+            <h2>Portifolio</h2>
+        </a>
+        <a href="" class="r">
+            <h2>Contato</h2>
+        </a>
+    </div>
 </main>
+<script>
+    var menu= document.querySelector(".menu-container");
+    var nav = document.getElementById("nav");
+    window.addEventListener("click", function(click){
+        if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
+            click.preventDefault();
+            menu.firstElementChild.classList.toggle("x");
+            menu.classList.toggle("x");
+        }
+    })
+</script>
 </body>
 </html>

@@ -15,7 +15,7 @@ small {max-width: 500px; display: block}
 /*------ Text styling -----*/
 h1,h2,h3 {font-family: "Ubuntu", quicksand, open sans; }
 h1 {font-size: 3em;font-size: calc(3rem + .8vmin); margin: 10px}
-h2 {font-size: 2em;font-size: calc(1.5rem + .75vmin); margin-top: 0}
+h2 {font-size: 2em;font-size: calc(1.5em + .75vmin); margin-top: 0}
 h3 {font-size: calc(1.18rem + .6vmin)}
 strong{color:#343434}
 p {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: left;font-family:roboto;color:#434343}
@@ -42,11 +42,38 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 .icon svg {width: 3rem; height: 3rem; -webkit-filter: grayscale(1); filter: grayscale(1); -webkit-transition: .05s linear; transition: .05s linear}
 .icon:hover svg, .icon:focus svg {-webkit-filter: none; filter: none}
 .center>p, .center {text-align: center}
-.menu-container {cursor: pointer;height: calc((3 * .3rem) + .8rem + .5rem);display: inline-block;position:fixed;top:15vh;right:5.5vh}
+.menu-container {cursor: pointer;height: calc((3 * .3rem) + .8rem + .5rem);display: inline-block;position:fixed;top:5.5vh;right:5.5vh;z-index: 3;}
 #menu {width: 2.8rem;height: .3rem;background: #dddddd;display: block;position: relative;top: 44%}
-#menu::after,#menu::before {content: "";display: block;width: 100%;height: .3rem;background: inherit;}
+#menu::after,#menu::before {content: "";display: block;width: 100%;height: .3rem;background: inherit;transition: .5s}
 #menu::before {transform: translateY(-.9rem)}
 #menu::after {transform: translateY(calc(.9rem - .3rem))}
+
+#menu.x {background:0;}
+#menu.x::after, #menu.x::before {background: #ffffff;}
+#menu.x::before {transform: translateY( calc( .3rem / 2 ) ) rotatez(45deg)}
+#menu.x::after {transform: translateY(calc( -.3rem / 2 )) rotatez(-45deg)}
+
+#nav{
+    height: 100vh;
+    width: 35vmax;
+    display:block;
+    position:fixed;
+    top:0;
+    right: 0;
+    background:#60dcff;
+    z-index: 2;
+    box-shadow: -2px 0 7px #00000030;
+    transition: .5s;
+    transform: translateX(calc( 35vmax + 9px ));
+    padding:5rem 0;
+    font-size:1.2rem;
+}
+#nav a h2{color:white;padding:1rem 0}
+#nav a h2:hover{color:black;}
+.menu-container.x ~ #nav{
+    transform: translateX(0);
+    /* opacity:1 */
+}
 /* ======= Inner Styling ====== */
 /* intro */
 .top {margin: 7vh auto;max-width:55rem}
@@ -81,8 +108,9 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 .list li p {margin: 1rem}
 li a h3 {display: inline-block; margin: auto 1rem}
 /*------ Footer Page -----*/
-footer.links {display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; color: white; }
-footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff}
+    /* there's nothing here yet ;-;*/
+    /* footer.links {display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; color: white; }
+    footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
 /* ======= Media Queries & Animation Section ====== */
 /*------ animating tags -----*/
 a.hide {-webkit-animation: .8s smoo forwards ease-out; animation: .8s smoo forwards ease-out}
