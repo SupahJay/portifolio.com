@@ -33,8 +33,8 @@ a {text-decoration: none; }
 .cta.big {background: #ff50f6; color: #f9f9f9; font-size: 1.1rem; border-radius: 5px; }
 .cta.small {background: #5de9f8; color: #323232; border-radius: 5px; -webkit-box-shadow: 3px 2px 0px 0px #0000002e; box-shadow: 3px 2px 0px 0px #0000002e}
 .cta:active {-webkit-box-shadow: none; box-shadow: none}
-.ghost {color: var(--main); border: var(--main) 2px solid; padding: .8em 2em; border-radius: 4px; -webkit-transition: all .3s ease-in-out, -webkit-transform .2s ease-in; transition: all .3s ease-in-out, -webkit-transform .2s ease-in; transition: all .3s ease-in-out, transform .2s ease-in; transition: all .3s ease-in-out, transform .2s ease-in, -webkit-transform .2s ease-in; display: inline-block; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.ghost:hover {background-color: var(--main); color: white; border: var(--main) 2px solid; padding: .8em 2em; border-radius: 4px; -webkit-transform: translate(0px, -5px); transform: translate(0px, -5px); -webkit-box-shadow: 0px 2px 8px 0px #0000002c; box-shadow: 0px 2px 8px 0px #0000002c}
+.ghost {color: var(--main); border: var(--main) 2px solid; padding: .8em 2em; border-radius: 4px; -webkit-transition: all .3s ease-in-out, -webkit-transform .2s ease-in; transition: all .3s ease-in-out, -webkit-transform .2s ease-in; transition: all .3s ease-in-out, transform .2s ease-in; transition: all .3s ease-in-out, transform .2s ease-in, -webkit-transform .2s ease-in; display: inline-block; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline:none}
+.ghost:hover, .ghost:focus {background-color: var(--main); color: white; border: var(--main) 2px solid; padding: .8em 2em; border-radius: 4px; -webkit-transform: translate(0px, -5px); transform: translate(0px, -5px); -webkit-box-shadow: 0px 2px 8px 0px #0000002c; box-shadow: 0px 2px 8px 0px #0000002c}
 .ghost:active {-webkit-transform: translate(0px, 0px); transform: translate(0px, 0px)}
 .seamless {padding: 10px; border: solid #ddd 1px; display: inline-block; border-radius: 3px; font-size: .9rem; min-width: 200px; width: 45%}
 textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open sans; display: block; resize: vertical}
@@ -53,27 +53,15 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 #menu.x::before {transform: translateY( calc( .3rem / 2 ) ) rotatez(45deg)}
 #menu.x::after {transform: translateY(calc( -.3rem / 2 )) rotatez(-45deg)}
 
-#nav{
-    height: 100vh;
-    width: 35vmax;
-    display:block;
-    position:fixed;
-    top:0;
-    right: 0;
-    background:#60dcff;
-    z-index: 2;
-    box-shadow: -2px 0 7px #00000030;
-    transition: transform .5s;
-    transform: translateX(calc( 35vmax + 9px ));
-    padding:5rem 0;
-    font-size:1.2rem;
-}
-#nav a h2{color:white;padding:1rem 0}
-#nav a h2:hover{color:black;}
-.menu-container.x ~ #nav{
-    transform: translateX(0);
-    /* opacity:1 */
-}
+#nav{height: 100vh;overflow: auto;display:block;position:fixed;top:0;right: 0;background:#60dcff;z-index: 2;box-shadow: -2px 0 7px #00000030;transition: transform .5s;transform: translateX(102%);padding:15vmin 9.5vmax 0;font-size:1.2rem}
+#nav h2{margin-bottom:0;}
+#nav h2:not(:last-child){margin-bottom:8vmin;}
+#nav h2 a{color:#ffffff;position:relative}
+#nav h2 a:hover,#nav h2 a:focus{color:#323232;outline:none}
+#nav h2 a:before {content: "";position: absolute;width: 100%;height: 3px;bottom: 0;left: 0;background: #323232;visibility: hidden;border-radius: 5px;transform: scaleX(0);transition: .25s ease-in-out;}
+#nav h2 a:hover:before,
+#nav h2 a:focus:before {visibility: visible;transform: scaleX(1.1);}
+.menu-container.x ~ #nav{transform: translateX(0);}
 /* ======= Inner Styling ====== */
 /* intro */
 .top {margin: 7vh auto;max-width:55rem}
