@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portifolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <style>
+        .por{
+            display:block;
+            border-radius: 5px;
+            height:50vh
+        }
+    </style>
+    <main>
+        <h1>Portifolio</h1>
+        <div class="por img"></div>
+    </main>
+    <a href="#" class="menu-container" target="_self">
+        <span id="menu" class=""></span>
+    </a>
+    <div id="nav">
+        <h2><a href="../" class="r">Home</a></h2>
+        <h2><a href="../about" class="r">Sobre Mim</a></h2>
+        <h2><a href="" class="r">Portifolio</a></h2>
+        <h2><a href="../contact" class="r">Contato</a></h2>
+    </div>
+</body>
+    <script>    
+        var menu= document.querySelector(".menu-container");
+        var nav = document.getElementById("nav");
+        window.addEventListener("click", function(click){
+            if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
+                click.preventDefault();
+                menu.firstElementChild.classList.toggle("x");
+                menu.classList.toggle("x");
+            }
+        })
+    </script>
+<script src="https://cdn.rawgit.com/SupahJay/myworkflow/master/core.js"></script>
+</html>

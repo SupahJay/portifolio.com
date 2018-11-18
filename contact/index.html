@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>not ready</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>This page is not ready yet!</h1>
+    </main>
+    <a href="#" class="menu-container" target="_self">
+        <span id="menu" class=""></span>
+    </a>
+    <div id="nav">
+        <h2><a href="../" class="r">Home</a></h2>
+        <h2><a href="../about" class="r">Sobre Mim</a></h2>
+        <h2><a href="" class="r">Portifolio</a></h2>
+        <h2><a href="../contact" class="r">Contato</a></h2>
+    </div>
+</body>
+    <script>    
+        var menu= document.querySelector(".menu-container");
+        var nav = document.getElementById("nav");
+        window.addEventListener("click", function(click){
+            if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
+                click.preventDefault();
+                menu.firstElementChild.classList.toggle("x");
+                menu.classList.toggle("x");
+            }
+        })
+    </script>
+</html>
