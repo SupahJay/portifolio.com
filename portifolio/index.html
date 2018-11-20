@@ -6,21 +6,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="main.js"></script>
 </head>
 
 <body>
     <style>
-        .por{
-            display:block;
-            border-radius: 5px;
-            height:50vh
+        :root{
+            --red:#ff5858;
+            --blue:#7BE7FF;
+            --yellow:#FEF85E;
+            --green:#A4EA78;
         }
+        main{background:none}
+        .divv{display:flex;flex-flow:wrap;flex-grow: 2;}
+        .por{
+            display:inline-block;
+            border-radius: 5px;
+            background:white;
+            margin:1rem;
+            flex-grow: 2;
+            position:relative;
+        }
+        .por .img{
+            width:100%;
+            height:280px;
+            display:block
+        }
+        .por h2{margin:1rem auto}
+        .por p{
+            margin:1rem
+        }
+        .por.red::before, .por.blue::before, .por.yellow::before, .por.green::before{
+            content:"";
+            display:block;
+            position:absolute;
+            top:1rem;
+            left:1rem;
+            border-radius:50%;
+            height:2rem;
+            width:2rem;
+            /* space dot in the middle of the header */
+        }
+        .por.red::before{
+            background:var(--red)
+        }
+        .por.blue::before{
+            background:var(--blue)
+        }
+        .por.yellow::before{
+            background:var(--yellow)
+        }
+        .por.green::before{
+            background:var(--green)
+        }
+
+
+        .realchip{
+            padding:.3rem .7rem;
+            padding-right:0;
+            background:#f1f1f1;
+            display: inline-block;
+            border-radius: 23px;
+            cursor: pointer;
+            user-select: none;
+            transition:ease-in .15s;
+            margin:0 .25rem
+        }
+        .realchip.yellow{background:var(--yellow);}
+        .realchip.red{background:var(--red)}
+        .realchip.blue{background:var(--blue)}
+        .realchip.green{background:var(--green)}
+
+        .realchip.yellow.x,
+        .realchip.red.x,
+        .realchip.blue.x,
+        .realchip.green.x{background:#f1f1f1;}
+
+        .realchip::after{
+            content:"\FF0B";
+            display:inline-block;
+            border-radius:50%;
+            background:#00000030;
+            /* width:22.5px;s */
+            font-size: 1rem;
+            padding:.1rem .35rem;
+            margin:0 .35rem;
+            transition: .3s;
+            transform: rotate(calc(45deg * 3))
+        }
+        .realchip.x::after{
+            transform: none
+        }
+        @supports(display:grid){
+        .divv{
+            display:grid;
+            flex-flow:wrap;
+            flex-grow: 2;
+            grid-template-columns:repeat(auto-fill,minmax(47vw, auto));
+            grid-gap:1rem;
+            margin: 2.5vmin
+        }
+        .por{
+            border-radius: 5px;
+            background:white;
+            margin:0;
+        }
+        .por .img{
+            width:100%;
+            height:280px;
+            display:block
+        } 
+        }
+        .hide{display:none !important}
     </style>
+    <script>
+        var gg={}
+    window.onclick=(t)=>{if(t.target.classList.contains("realchip")){
+        t.target.classList.toggle("x");
+        for (xxx of document.querySelector("#chips").children){
+            // console.log(xxx.classList[1], xxx.classList, xxx.classList.contains("x"));
+            // truuuu= xxx.classList;
+            gg[xxx.classList[1]]=xxx.classList.contains("x")
+        }
+        for (ttt of document.querySelector(".divv").children) {
+            if(gg[ttt.classList[1]]){ttt.classList.add("hide")}
+            else{ttt.classList.remove("hide")}
+        }
+    }}
+    </script>
     <main>
         <h1>Portifolio</h1>
-        <div class="por img"></div>
+        <p>Here I write my way.</p>
+        <div id="chips">
+            <div class="realchip yellow">Icons</div>
+            <div class="realchip blue">Website</div>
+            <div class="realchip green">Images</div>
+            <div class="realchip red">Prototype</div>
+        </div>
+
     </main>
+    <div class="divv">
+        <div class="por red">
+            <h2>Sample Image</h2>
+            <div class="img"></div>
+            <p>this is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+        <div class="por red">
+            <h2>Sample Image</h2>
+            <div class="img"></div>
+            <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+        <div class="por blue">
+            <h2>Sample Image</h2>
+            <div class="img"></div>
+            <p>this is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+        <div class="por yellow">
+            <h2>Sample Image</h2>
+            <div class="img"></div>
+            <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+    
+        <div class="por red">
+            <h2>Sample Image</h2>
+            <div class="img"></div>
+            <p>this is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+        <div class="por green">
+            <h2>Sample Image</h2>
+            <div class="img"></div>
+            <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+    </div>
     <a href="#" class="menu-container" target="_self">
         <span id="menu" class=""></span>
     </a>
