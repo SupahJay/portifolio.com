@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portifolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewpostt" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -12,170 +12,51 @@
 
 <body>
     <style>
-        :root{
-            --red:#ff5858;
-            --blue:#7BE7FF;
-            --yellow:#FEF85E;
-            --green:#A4EA78;
-        }
+        body{min-height: 110vh}
         main{background:none}
-        .divv{display:flex;flex-flow:wrap;flex-grow: 2;}
-        .por{
-            display:inline-block;
-            border-radius: 5px;
-            background:white;
-            margin:1rem;
-            flex-grow: 2;
-            position:relative;
-        }
-        .por .img{
-            width:100%;
-            height:280px;
-            display:block
-        }
-        .por h2{margin:1rem auto}
-        .por p{
-            margin:1rem
-        }
-        .por.red::before, .por.blue::before, .por.yellow::before, .por.green::before{
-            content:"";
-            display:block;
-            position:absolute;
-            top:1rem;
-            left:1rem;
-            border-radius:50%;
-            height:2rem;
-            width:2rem;
-            /* space dot in the middle of the header */
-        }
-        .por.red::before{
-            background:var(--red)
-        }
-        .por.blue::before{
-            background:var(--blue)
-        }
-        .por.yellow::before{
-            background:var(--yellow)
-        }
-        .por.green::before{
-            background:var(--green)
-        }
-
-
-        .realchip{
-            padding:.3rem .7rem;
-            padding-right:0;
-            background:#f1f1f1;
-            display: inline-block;
-            border-radius: 23px;
-            cursor: pointer;
-            user-select: none;
-            transition:ease-in .15s;
-            margin:0 .25rem
-        }
-        .realchip.yellow{background:var(--yellow);}
-        .realchip.red{background:var(--red)}
-        .realchip.blue{background:var(--blue)}
-        .realchip.green{background:var(--green)}
-
-        .realchip.yellow.x,
-        .realchip.red.x,
-        .realchip.blue.x,
-        .realchip.green.x{background:#f1f1f1;}
-
-        .realchip::after{
-            content:"\FF0B";
-            display:inline-block;
-            border-radius:50%;
-            background:#00000030;
-            /* width:22.5px;s */
-            font-size: 1rem;
-            padding:.1rem .35rem;
-            margin:0 .35rem;
-            transition: .3s;
-            transform: rotate(calc(45deg * 3))
-        }
-        .realchip.x::after{
-            transform: none
-        }
-        @supports(display:grid){
-        .divv{
-            display:grid;
-            flex-flow:wrap;
-            flex-grow: 2;
-            grid-template-columns:repeat(auto-fill,minmax(47vw, auto));
-            grid-gap:1rem;
-            margin: 2.5vmin
-        }
-        .por{
-            border-radius: 5px;
-            background:white;
-            margin:0;
-        }
-        .por .img{
-            width:100%;
-            height:280px;
-            display:block
-        } 
-        }
-        .hide{display:none !important}
     </style>
-    <script>
-        var gg={}
-    window.onclick=(t)=>{if(t.target.classList.contains("realchip")){
-        t.target.classList.toggle("x");
-        for (xxx of document.querySelector("#chips").children){
-            // console.log(xxx.classList[1], xxx.classList, xxx.classList.contains("x"));
-            // truuuu= xxx.classList;
-            gg[xxx.classList[1]]=xxx.classList.contains("x")
-        }
-        for (ttt of document.querySelector(".divv").children) {
-            if(gg[ttt.classList[1]]){ttt.classList.add("hide")}
-            else{ttt.classList.remove("hide")}
-        }
-    }}
-    </script>
     <main>
         <h1>Portifolio</h1>
-        <p>Here I write my way.</p>
-        <div id="chips">
-            <div class="realchip yellow">Icons</div>
-            <div class="realchip blue">Website</div>
-            <div class="realchip green">Images</div>
-            <div class="realchip red">Prototype</div>
+        <p>Aqui estão alguns projetos que eu já criei. Eles estão categorizados por tipo de design que eu tive que fazer.</p>
+        <div id="chips" style="text-align: left">
+            Tipos:
+            <div class="filterChip icon">Icons</div>
+            <div class="filterChip website">Websites</div>
+            <div class="filterChip image">Imagens</div>
+            <div class="filterChip prototype">Protótipos</div>
         </div>
 
     </main>
-    <div class="divv">
-        <div class="por red">
-            <h2>Sample Image</h2>
-            <div class="img"></div>
-            <p>this is a sample img so its ok to be boring. This text is a sample too btw</p>
-        </div>
-        <div class="por red">
-            <h2>Sample Image</h2>
-            <div class="img"></div>
+    <div class="postContainer">
+        <div class="post website">
+           <h2>Sample Image</h2>
+            <img class="img">
             <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
         </div>
-        <div class="por blue">
-            <h2>Sample Image</h2>
-            <div class="img"></div>
+        <div class="post image">
+           <h2>Sample Image</h2>
+            <img class="img">
+            <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
+        </div>
+        <div class="post icon">
+           <h2>Sample Image</h2>
+            <img class="img">
             <p>this is a sample img so its ok to be boring. This text is a sample too btw</p>
         </div>
-        <div class="por yellow">
-            <h2>Sample Image</h2>
-            <div class="img"></div>
+        <div class="post icon">
+           <h2>Sample Image</h2>
+            <img class="img">
             <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
         </div>
     
-        <div class="por red">
-            <h2>Sample Image</h2>
-            <div class="img"></div>
+        <div class="post website">
+           <h2>Sample Image</h2>
+            <img class="img">
             <p>this is a sample img so its ok to be boring. This text is a sample too btw</p>
         </div>
-        <div class="por green">
-            <h2>Sample Image</h2>
-            <div class="img"></div>
+        <div class="post prototype">
+           <h2>Sample Image</h2>
+            <img class="img">
             <p>This is a sample img so its ok to be boring. This text is a sample too btw</p>
         </div>
     </div>
@@ -193,12 +74,31 @@
         var menu= document.querySelector(".menu-container");
         var nav = document.getElementById("nav");
         window.addEventListener("click", function(click){
+            //Menu function: It toggles a class that activates the menu on these certains situations
             if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
                 click.preventDefault();
                 menu.firstElementChild.classList.toggle("x");
                 menu.classList.toggle("x");
             }
+            //Chip filter function: Runs when a chip is clicked. Creates an array and re-checks the state of each post
+            if( click.target.classList.contains('filterChip') ){
+                var stateOfButtons={};
+                click.target.classList.toggle( 'x' );
+                //Creates a array with the states(true|false) of the color-category 
+                for ( chip of document.querySelector('#chips').children ){
+                    stateOfButtons[chip.classList[1]] = chip.classList.contains('x');
+                }
+                //show or hide each post according to the state of it's color-category
+                for ( post of document.querySelector('.postContainer').children ){
+                    if( stateOfButtons[post.classList[1]] ){ post.classList.add('hide') }
+                    else{ post.classList.remove('hide') }
+                }
+            }
         })
+        /*first way:
+        create a aaray of the state of the categoties, re-check on every click, then scan all of the itens and include style if needed
+        Second way: scan for the class activeted by the button and search and only change them
+        */
     </script>
 <script src="https://cdn.rawgit.com/SupahJay/myworkflow/master/core.js"></script>
 </html>
