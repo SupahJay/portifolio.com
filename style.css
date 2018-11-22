@@ -18,7 +18,7 @@ h1 {font-size: 3em;font-size: calc(3rem + .8vmin); margin: 10px}
 h2 {font-size: 2em;font-size: calc(1.5em + .75vmin); margin-top: 0}
 h3 {font-size: calc(1.18rem + .6vmin)}
 strong{color:#343434}
-p {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: left;font-family:roboto;color:#434343}
+p,.text {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: left;font-family:roboto;color:#434343}
 a {text-decoration: none; }
 /* style any link without class */
 :not(.gist-meta)> a:not([class]) {position: relative; -webkit-transform: translate(0px); transform: translate(0px); color: black}
