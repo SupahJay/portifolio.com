@@ -119,6 +119,7 @@ footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
     margin:0 2.5vmin 2.5vmin 0;
     width:500px;
     flex-grow: 2;
+    color:inherit;
     box-shadow: 2px 2px 7px #00000030;
 
 }
