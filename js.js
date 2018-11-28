@@ -1,5 +1,5 @@
 (function () {
-    var button   = document.querySelector("#openSesame");
+     button   = document.querySelector("#openSesame");
     var safeHash = "r"//any hash that dont has any id linked to it
     button.addEventListener("click", function() {
             button.classList.toggle("hide")
@@ -34,6 +34,7 @@
             </form>`
             // form.classList.add("email");
             button.parentNode.parentNode.appendChild(form)
+            window.scrollBy({ top: -80 + form.getBoundingClientRect().top, left: 0, behavior: 'smooth' });
         })
 
     if ( !!urlChecker() ) { changeHashBack() }
