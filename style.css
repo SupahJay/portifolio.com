@@ -222,8 +222,9 @@ a.hide {-webkit-animation: .8s smoo forwards ease-out; animation: .8s smoo forwa
         .info {grid-template-columns: 1fr; }
         .seamless {display: block; min-width: initial; width: 90% }
         #truu{ float: none; width: auto; border-radius: 0; min-width: auto; }
-        .float_page {width: calc(100vw); height: 100vh;top: 0;right:0;animation: 1s slideIn forwards;border-radius: 0}
+        .float_page {width: calc(95vw - 2.5vh); height: 95vh;top: 2.5vh;right:2.5vh;animation: 1s slideIn forwards;border-radius: 0}
     }
+    /* MIN BREAKDOWN IN 420!!!! */
 }
 
 /*------ Animations -----*/
