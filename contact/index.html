@@ -10,8 +10,47 @@
 </head>
 
 <body>
+    <svg style="display: none">
+            <symbol id="messenger" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
+                <path style="fill:inherit" d="M256,0C114.624,0,0,106.112,0,237.024c0,74.592,37.216,141.12,95.392,184.576V512l87.168-47.84 c23.264,6.432,47.904,9.92,73.44,9.92c141.376,0,256-106.112,256-237.024C512,106.112,397.376,0,256,0z"/>
+                <polygon style="fill:#FAFAFA;" points="281.44,319.2 216.256,249.664 89.056,319.2 228.96,170.656 295.744,240.192 421.376,170.656"/>
+            </symbol>
+            <symbol id="phone" viewBox="0 0 24 24">
+                <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+            </symbol>
+            <symbol id="mail" viewBox="0 0 24 24">
+                <path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/>
+            </symbol>
+        </svg>
     <main>
-        <h1>This page is not ready yet!</h1>
+        <p>Você pode falar comigo por:</p>
+        <div class="options">
+            <a target="_blank" class="icon" href="https://m.me/moabe.limagomes">
+                <svg fill="#67dffa">
+                    <use xlink:href="#messenger" href="#messenger"></use>
+                </svg>
+                <p>Facebook<br>Messenger</p>
+            </a>
+            <a target="_blank" class="icon" href="mailto:moabelgomes@hotmail.com">
+                <svg fill="#735aff">
+                    <use xlink:href="#mail" href="#mail"></use>
+                </svg>
+                <p>Email</p>
+            </a>
+            <a target="_blank" class="icon" href="tel:85986116857">
+                <svg fill="#58f57d">
+                    <use xlink:href="#phone" href="#phone"></use>
+                </svg>
+                <p>Telefone</p>
+            </a>
+        </div>
+        <form action="https://formspree.io/moabelgomes@gmail.com" method="POST" class=" center">
+            <p>Me mande um email por aqui:</p>
+                <input type="text" name="name" class="seamless" id="name" placeholder="Nome">
+                <input type="email" name="email" class="seamless" placeholder="Email">
+                <textarea name="text" class="seamless" placeholder="Mensagem"></textarea>
+                <input type="submit" class="cta small" value="Enviar">
+            </form>
     </main>
     <a href="#" class="menu-container" target="_self">
         <span id="menu" class=""></span>
