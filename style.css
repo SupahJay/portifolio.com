@@ -36,7 +36,7 @@ a {text-decoration: none; }
 .ghost {color: var(--main); border: var(--main) 2px solid; padding: .8em 2em; border-radius: 4px; -webkit-transition: all .3s ease-in-out, -webkit-transform .2s ease-in; transition: all .3s ease-in-out, -webkit-transform .2s ease-in; transition: all .3s ease-in-out, transform .2s ease-in; transition: all .3s ease-in-out, transform .2s ease-in, -webkit-transform .2s ease-in; display: inline-block; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline:none}
 .ghost:hover, .ghost:focus {background-color: var(--main); color: white; border: var(--main) 2px solid; padding: .8em 2em; border-radius: 4px; -webkit-transform: translate(0px, -5px); transform: translate(0px, -5px); -webkit-box-shadow: 0px 2px 8px 0px #0000002c; box-shadow: 0px 2px 8px 0px #0000002c}
 .ghost:active {-webkit-transform: translate(0px, 0px); transform: translate(0px, 0px)}
-.seamless {padding: 10px; border: solid #ddd 1px; display: inline-block; border-radius: 3px; font-size: .9rem; min-width: 200px; width: 45%}
+.seamless {padding: 10px; border: none; display: inline-block; border-radius: 3px; font-size: .9rem; min-width: 200px; width: 45%}
 textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open sans; display: block; resize: vertical}
 .icon {margin: 10px; outline: none}
 .icon svg {width: 3rem; height: 3rem; -webkit-filter: grayscale(1); filter: grayscale(1); -webkit-transition: .05s linear; transition: .05s linear}
@@ -83,7 +83,7 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 /*------ Floating Pages -- Skill set section -----*/
 .float_page {z-index:4;
     -webkit-font-smoothing: subpixel-antialiased;
-    display: none; width: calc(100vw - (2 * 5.5vw) - 5vmin); height: 90vh; overflow-y: hidden; background: white; position: fixed; top: 5vh; border-radius: 5px; border: .5px solid #cecece; -webkit-animation: 1s slideIn forwards; animation: 1s slideIn forwards; -webkit-box-shadow: 0 0 12px #00000036; box-shadow: 0 0 12px #00000036; padding: 30px auto}
+    display: none; width: calc(100vw - (2 * 5.5vw) - 5vmin); height: 90vh; overflow-y: hidden; background: white; position: fixed; top: 5vh; border-radius: 5px; -webkit-animation: 1s slideIn forwards; animation: 1s slideIn forwards; -webkit-box-shadow: 0 0 12px #00000036; box-shadow: 0 0 12px #00000036; padding: 30px auto}
 .float_page>* {opacity: 0; -webkit-animation: 0.5s 1s inside forwards; animation: 0.5s 1s inside forwards; }
 .float_page>div {padding: 1rem 2.5rem; overflow-y: auto; height: 100%; text-align: left; font-family: open sans}
 .float_page .img {width: 100%; height: 50vh; background: #000027b9; border-radius: 5px; }
