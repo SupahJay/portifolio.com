@@ -1,0 +1,27 @@
+*{box-sizing: border-box;padding:0;}
+body{background:whitesmoke url(Rectangle.svg) no-repeat;margin:0;font-family:roboto, 'open sans', sans-serif, open sans;color:#323232;}
+:root{--svgbgm:#0284FD}
+main header{margin:0;margin-bottom: 1rem;width:100%;grid-column: 1/-1;font-size:120%}
+header h1{margin:1rem;margin-bottom:0rem;}
+header p{max-width:70vmax;margin: .8rem 0 1.5rem 1rem;}
+p{color:#494949;line-height: 1.4rem}
+main{background:#ffffff;min-height:76vh;margin:6.5vh;display:grid;grid-template-columns:repeat(auto-fill,minmax(350px, 1fr));padding:1.4rem;border-radius:5px;gap: 1rem}
+section{box-shadow:2px 2px 7px 0px #79797900;min-width:250px;min-height:33vh;border-radius:5px;padding:1.2rem;background:#f5f3ff;/* url(Rectangle.svg) no-repeat bottom;background-size: 120%;*/display:grid;
+grid-template-areas:"title . date"
+                    "textt textt textt"
+                    "author . ."
+                    "data data data";
+                    align-items: center
+}
+section p{margin:.2rem}
+.title{grid-area: title}
+.date{grid-area: date;text-align: right;}
+.data{grid-area: data}
+.author{grid-area: author;margin-bottom: 1rem}
+.data span{}
+.text{grid-area: textt}
+
+
+section:hover{box-shadow:2px 2px 7px 0px #7979797e;transition:.2s}
+section h2{margin:5px 10px;margin-left:0}
+ul{list-style:none;}
