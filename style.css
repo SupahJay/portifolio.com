@@ -146,13 +146,16 @@ footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
     border-radius:50%;
     height:2rem;
     width:2rem;
-    z-index: -1;
+    z-index: -1;;
+    transition:.1s;
+    color:transparent;
+    font-size:1.6rem
 }
-.post.icon h2::before{background:var(--icon)}
-.post.website h2::before{background:var(--website)}
-.post.image h2::before{background:var(--image)}
-.post.prototype h2::before{background:var(--prototype)}
-
+.post h2:hover::before{color:#323232}
+.post.icon h2::before{background:var(--icon);content:"Icon";}
+.post.website h2::before{background:var(--website);content:"Website"}
+.post.image h2::before{background:var(--image);content:"Image"}
+.post.prototype h2::before{background:var(--prototype);content:"Prototype"}
 /*------ Chips -----*/
 .filterChip{
     padding:.3rem .7rem;
