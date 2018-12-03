@@ -35,6 +35,7 @@
             <!-- <div class="filterChip image">Imagens</div> -->
             <div class="filterChip prototype text">Protótipos</div>
         </div>
+        <label style="display: block;user-select: none;margin:.5rem 0">Abrir em nova aba: <input type="checkbox" class="newTab"></label>
     </main>
     <div class="postContainer">
         <a class="post website" href="../samples/sample-1">
@@ -114,6 +115,16 @@
                 for ( post of document.querySelector('.postContainer').children ){
                     if( stateOfButtons[post.classList[1]] ){ post.classList.add('hide') }
                     else{ post.classList.remove('hide') }
+                }
+            }
+            if( click.target.classList.contains('newTab') ){
+                click.target.classList.toggle( 'on' );
+                if (click.target.classList.contains('on')){
+                    tar="_blank"
+                } else{ tar="_target"}
+                //show or hide each post according to the state of it's color-category
+                for ( post of document.querySelector('.postContainer').children ){
+                    post.target = tar
                 }
             }
         })

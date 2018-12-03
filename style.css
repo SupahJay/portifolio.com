@@ -18,7 +18,7 @@ h1 {font-size: 3em;font-size: calc(3rem + .8vmin); margin: 10px}
 h2 {font-size: 2em;font-size: calc(1.5em + .75vmin); margin-top: 0}
 h3 {font-size: calc(1.18rem + .6vmin)}
 strong{color:#343434}
-p,.text {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: left;color:#434343}
+p,label,.text {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: left;color:#434343}
 a {text-decoration: none; }
 /* style any link without class */
 :not(.gist-meta)> a:not([class]) {position: relative; -webkit-transform: translate(0px); transform: translate(0px); color: black}
@@ -185,6 +185,11 @@ footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
 .filterChip.icon{background:var(--icon)}
 .filterChip.x{background:#f1f1f1;}
 .filterChip.x::after{transform: none}
+/*------ New tab Switch -----*/
+.newTab{-webkit-appearance: none;outline:none;background:#dfdfdf;border-radius:10px;position:relative;height:1.25rem;width:3rem;display:inline-block;margin:0;vertical-align: bottom;transition: .2s}
+.newTab.on{background: #52cbe0}
+.newTab::after{content:"";background:white;border-radius:50%;position:absolute;left:0%;height:1.25rem;width:1.25rem;display:block;transform:scale(1.05);box-shadow: 0px 0px 3px #00000063;transition: .2s}
+.newTab.on::after{left:calc(100% - 1rem)}
 
 .hide{display:none !important}
 /* ======= Media Queries & Animation Section ====== */
