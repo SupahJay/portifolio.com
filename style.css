@@ -1,10 +1,14 @@
-* {-webkit-box-sizing: border-box; box-sizing: border-box; }
+* {-webkit-box-sizing: border-box; box-sizing: border-box;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+         hyphens: auto;
+}
 :root {--main: #5029b4; }
 /* ======= GENERAL ====== */
 ::-webkit-input-placeholder {font-family: open sans; }
 :-ms-input-placeholder {font-family: open sans; }
 ::placeholder {font-family: open sans; }
-body {font-family: roboto, open sans, Arial, Helvetica, sans-serif; background-color: #13beef; color: #232323; text-align: center; margin: 0; }
+body {font-family: roboto, open sans, Arial, Helvetica, sans-serif; background-color: #13beef; color: #424242; text-align: center; margin: 0; }
 body main {background: white; margin: 2.5vmin /* before was vw */; padding: 4% 5.5vw; border-radius: 5px}
 details {border: solid #dadada 1px; border-radius: 5px; padding: 5px; outline-offset: 3px; }
 summary {margin: 5px; }
@@ -22,7 +26,7 @@ p,label,.text {font-size: 1.1rem;font-size: calc(.95rem + .6vmin); text-align: l
 a {text-decoration: none; }
 /* style any link without class */
 :not(.gist-meta)> a:not([class]) {position: relative; -webkit-transform: translate(0px); transform: translate(0px); color: black}
-:not(.gist-meta)> a:not([class])::after {content: ""; height: 2.3px; background-color: #5f02b6; position: absolute; right: 2px; left: 2px; bottom: 1px; display: block; -webkit-transition: .3s; transition: .3s; z-index: -1; }
+:not(.gist-meta)> a:not([class])::after {content: ""; height: 2.3px; background: #7d3de1; position: absolute; right: 2px; left: 2px; bottom: 1px; display: block; -webkit-transition: .3s; transition: .3s; z-index: -1; }
 :not(.gist-meta)> a:not([class]):hover {color: white}
 :not(.gist-meta)> a:not([class]):hover::after {-webkit-transform: scale(1.08, .9); transform: scale(1.08, .9); height: 100%; left: 0; right: 0; bottom: 0; }
 /* ======= Style Templates ====== */
@@ -87,6 +91,8 @@ textarea.seamless {width: 90%; height: 10rem; font-size: 1rem; font-family: open
 .float_page>* {opacity: 0; -webkit-animation: 0.5s 1s inside forwards; animation: 0.5s 1s inside forwards; }
 .float_page>div {padding: 1rem 2.5rem; overflow-y: auto; height: 100%; text-align: left; font-family: open sans}
 .float_page .img {width: 100%; height: 50vh; background: #000027b9; border-radius: 5px; }
+.float_page h1, .float_page h2, .float_page h3, .float_page strong, .bold{color:#7954ff}
+.bold{font-weight: bold}
 .close {z-index:50;position: fixed; background: #f0f0f0; padding: 1em; top: 7vh; right: 5vw; display: none; border-radius: 50%; color: #323232; line-height: .6; font-weight: bold; }
 .float_page:target~.close {opacity: 0; -webkit-animation: inside 2.5s 1s forwards; animation: inside 2.5s 1s forwards; display: block; -webkit-transition: .3s; transition: .3s; }
 .float_page:target~.close:hover {background: #ff6c6c; color: white}
