@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blog One</title>
+        <link rel="stylesheet" type="text/css"  href="file.css" />
+        <!-- Passion one gives a strong contrast looking more professional -->
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Image News</h1>
+            <label for="menu" class="hamburger">
+                <svg imgClass="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path d="m 10,973.36218 0,12 80,0 0,-12 z m 0,23 0,12.00002 80,0 0,-12.00002 z m 0,23.00002 0,12 80,0 0,-12 z" style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" fill="#000000" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
+            </label>
+            <input type="checkbox" name="" id="menu">
+            <ul class="nav">
+                <a href="#">News</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Featured</a>
+            </ul>
+        </header>
+        <section class="intro">
+            <article class="large right" style="background:url(mizu.jpg)">
+                <h1>A Mágica de Liquid Design</h1>
+                <p>Esse site não contem nem um media-query mas sempre vai ser responsivo para qualquer dispositivo graças ao design que se adapta ao ambiente.</p>
+            </article>
+            <section class="small">
+                <article class="right img">
+                    <h3>Top 10 worst advices</h3><br>
+                    <p>Has been a long time since</p>
+                </article>
+                <article class="right img">
+                    <h3>Adulting 101</h3><br>
+                    <p>Generic Article</p>
+                </article>
+                <article class="right img">
+                    <h3>Never do this again!</h3><br>
+                    <p>Clickbait Article</p>
+                </article>
+            </section>
+        </section>
+        <section class="featured_posts">
+            <h2 class="fix center">Content</h2>
+            <div class="flex-links">
+                <div class="links img"></div>
+                <div class="links img"></div>
+                <div class="links img"></div>
+                <div class="links img"></div>
+                <div class="links img"></div>
+                <div class="links img"></div>
+                <div class="links img"></div>
+            </div>
+        </section>
+        <section class="flat">
+            <h2 class="center">You might like these:</h2>
+            <article>
+                <img src="" alt="" class="img">
+                <div>
+                    <h3>Header sample</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia reprehenderit impedit doloribus atque, ullam suscipit nobis quia labore consequuntur dignissimos dolores, accusamus magni sapiente corporis iusto voluptatum aspernatur numquam reiciendis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum, reiciendis porro sunt enim eligendi perspiciatis pariatur deleniti ipsam iure.</p>
+                </div>
+            </article>
+            <article>
+                <img src="" alt="" class="img">
+                <div>
+                    <h3>Just a sample text</h3>
+                    <p>At minima ab magni delectus! Veniam facilis molestias rem perferendis odit dolor alias consequuntur saepe tempore reiciendis aliquid ipsa beatae veritatis, expedita similique quod voluptatem inventore consectetur illo repellat ab. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum, reiciendis porro sunt enim eligendi perspiciatis pariatur deleniti ipsam iure.</p>
+                </div>
+            </article>
+            <article>
+                <img src="" alt="" class="img">
+                <div>
+                    <h3>How to write cool resumes whitout being corny.</h3>
+                    <p>Rerum repudiandae quae aliquam quisquam ullam aperiam, tempore voluptatibus cumque odio, optio tempora facilis quaerat illo distinctio sequi rem alias ratione asperiores, quos eveniet nam commodi reiciendis soluta similique. Odit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum, reiciendis porro sunt enim eligendi perspiciatis pariatur deleniti ipsam iure.</p>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <div class="goodbye">Made with &#128158; by Me</div>
+        </footer>
+        <script src="https://cdn.rawgit.com/SupahJay/myworkflow/master/core.js">
+        /*
+        function tap(b){console.log(...arguments); return b}
+window.onload = loadImages;
+window.onresize = loadImages;
+var valuess="";
+
+altStyles=["gray"]
+function loadImages() {
+var numB=1;
+    //Select all images tags
+    document.querySelectorAll(".img").forEach((imgClass) => {
+        var g="";
+        //if also include an styling tag [altStyles] works
+        if( imgClass.classList.value.includes(...altStyles) ){
+            g = "g"
+            //inacvated thing for now
+//             false && imgClass.classList.forEach(clas=>{
+//                 if(altStyles.includes(clas)) console.log(clas)
+//             })
+        }
+        size = imgClass.offsetWidth + "/" + imgClass.offsetHeight + "";
+        num  = "/?random"
+
+        if (valuess.includes(size)){num ="/?images=" + numB++; console.log(num)}
+        
+        valuess = [...valuess, size]
+        imgClass.style.background = "tranparent";
+        var bgm = "https://picsum.photos/"+ (g +"/") + size + num;
+        imgClass.tagName=="IMG"? imgClass.src=bgm : imgClass.style.backgroundImage = "url("+bgm+")";
+    })
+}
+
+function watch(targetNode){
+    var event=new MutationObserver(loadImages);
+    event.observe(targetNode, { childList: true });
+}
+*/
+        </script>
+    </body>
+</html>
