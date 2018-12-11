@@ -104,7 +104,7 @@
     <script>    
         var menu= document.querySelector(".menu-container");
         var nav = document.getElementById("nav");
-        if( window.localStorage.getItem("switchState") == "true" ){document.querySelector(".newTab").classList.add("on")}
+        if( window.localStorage.getItem("switchState") == "true" ){document.querySelector(".newTab").classList.add("on"); targetChange()}
         window.addEventListener("click", function(click){
             //Menu function: It toggles a class that activates the menu on these certains situations
             if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
@@ -129,15 +129,18 @@
             if( click.target.classList.contains('newTab') ){
                 click.target.classList.toggle( 'on' );
                 window.localStorage.setItem("switchState", click.target.classList.contains('on'))
-                if (click.target.classList.contains('on')){
-                    tar="_blank"
-                } else{ tar="_target"}
-                //show or hide each post according to the state of it's color-category
-                for ( post of document.querySelector('.postContainer').children ){
-                    post.target = tar
-                }
+                targetChange()
             }
         })
+        function targetChange(){
+            if (document.querySelector(".newTab").classList.contains('on')){
+                tar="_blank"
+            } else{ tar="_target"}
+            //show or hide each post according to the state of it's color-category
+            for ( post of document.querySelector('.postContainer').children ){
+                post.target = tar
+            }
+        }
         /*first way:
         create a aaray of the state of the categoties, re-check on every click, then scan all of the itens and include style if needed
         Second way: scan for the class activeted by the button and search and only change them
