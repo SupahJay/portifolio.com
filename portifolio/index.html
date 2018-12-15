@@ -21,6 +21,8 @@
     <style>
         body{min-height: 110vh}
         main{background:none}
+        .post{opacity: 0;transition: .5s}
+        .show{opacity:1}
     </style>
 </head>
 
@@ -141,6 +143,19 @@
                 post.target = tar
             }
         }
+        function add(selected){
+            observer = new IntersectionObserver( (x,y) => {
+                f=[x,y];
+
+                x.forEach( (ttt,tt) => {
+                    console.log(tt,ttt.intersectionRatio)
+                    if(ttt.isIntersecting) ttt.target.classList.add("show")
+                })},
+            { root: null,  threshold: 0.75 });
+            //the three arguments of a forEach are: index, key, the_array_it_self
+            [...document.querySelectorAll(selected)].forEach((v,b,n)=>{observer.observe(v);/*console.log([v,b,n])*/})
+        }
+        add(".post")
         /*first way:
         create a aaray of the state of the categoties, re-check on every click, then scan all of the itens and include style if needed
         Second way: scan for the class activeted by the button and search and only change them
