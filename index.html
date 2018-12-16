@@ -169,21 +169,10 @@
         <h2><a href="portifolio" class="r">Portifólio</a></h2>
         <h2><a href="contact" class="r">Contato</a></h2>
     </div>
-    <script>    
-        var menu= document.querySelector(".menu-container");
-        var nav = document.getElementById("nav");
-        window.addEventListener("click", function(click){
-            if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
-                click.preventDefault();
-                menu.firstElementChild.classList.toggle("x");
-                menu.classList.toggle("x");
-            }
-        })
+    <script src="index.js"></script>
+    <script src="main.js"></script>
+    <script>
+    scrollToView(...document.querySelectorAll("section.info"),document.querySelector("div.botton.center"))
     </script>
-        <!-- <footer class="links">
-            <a href="about" class="links"><h2>Sobre mim</h2></a>
-            <a href="#" class="links"><h2>Media</h2></a>
-        </footer> -->
-    <script src="js.js"></script>
 </body>
 </html>

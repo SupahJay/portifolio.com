@@ -87,15 +87,5 @@
         <h2><a href="#" class="r" target="_self">Contato</a></h2>
     </div>
 </body>
-<script>
-    var menu= document.querySelector(".menu-container");
-    var nav = document.getElementById("nav");
-    window.addEventListener("click", function(click){
-        if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
-            click.preventDefault();
-            menu.firstElementChild.classList.toggle("x");
-            menu.classList.toggle("x");
-        }
-    })
-</script>
+<script src="../main.js"></script>
 </html>

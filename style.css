@@ -2,6 +2,7 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
          hyphens: auto;
+         transition:.5s;
 }
 :root {--main: #5029b4; }
 /* ======= GENERAL ====== */

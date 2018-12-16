@@ -56,23 +56,16 @@
     <a href="#" class="menu-container" target="_self">
         <span id="menu" class=""></span>
     </a>
-   <div id="nav">
+    <div id="nav">
         <h2><a href="../" class="r" target="_self">Home</a></h2>
         <h2><a href="#" class="r" target="_self">Sobre Mim</a></h2>
         <h2><a href="../portifolio" class="r" target="_self">Portifolio</a></h2>
         <h2><a href="../contact" class="r" target="_self">Contato</a></h2>
-   </div>
+    </div>
 </main>
+<script src="../main.js"></script>
 <script>
-    var menu= document.querySelector(".menu-container");
-    var nav = document.getElementById("nav");
-    window.addEventListener("click", function(click){
-        if( menu.contains(click.target) || ( menu.classList.contains("x") && !nav.contains(click.target) )){
-            click.preventDefault();
-            menu.firstElementChild.classList.toggle("x");
-            menu.classList.toggle("x");
-        }
-    })
+scrollToView(document.querySelector("h2"),...document.querySelectorAll("li"))
 </script>
 </body>
 </html>
