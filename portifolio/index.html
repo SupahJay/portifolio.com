@@ -135,7 +135,7 @@
         function targetChange(){
             if (document.querySelector(".newTab").classList.contains('on')){
                 tar="_blank"
-            } else{ tar="_target"}
+            } else{ tar=""}
             //show or hide each post according to the state of it's color-category
             for ( post of document.querySelector('.postContainer').children ){
                 post.target = tar
