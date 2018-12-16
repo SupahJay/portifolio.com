@@ -9,8 +9,8 @@ window.addEventListener("click", function(click){
 function scrollToView(){
     observer = new IntersectionObserver( post => {
         post.forEach( individual => {
-            if(individual.isIntersecting) { individual.target.style.opacity=1; observer.unobserve(individual.target) }
+            if(individual.isIntersecting) { individual.target.classList.remove("bView"); observer.unobserve(individual.target) }
         })},
     { root: null,  threshold: 0.55 });
-    [...arguments].forEach( post =>{observer.observe(post);post.style.opacity=0;})
+    [...arguments].forEach( post =>{observer.observe(post);post.classList.add("bView");})
 }

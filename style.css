@@ -2,7 +2,7 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
          hyphens: auto;
-         transition:.5s;
+         transition:.6s ease-out;
 }
 :root {--main: #5029b4; }
 /* ======= GENERAL ====== */
@@ -257,3 +257,4 @@ a.hide {-webkit-animation: .8s smoo forwards ease-out; animation: .8s smoo forwa
 @keyframes appear {0% {-webkit-transform: translate(0, -80px) scale(.8); transform: translate(0, -80px) scale(.8); opacity: .3 }
  100% {-webkit-transform: translate(0, -50px) scale(1); transform: translate(0, -50px) scale(1); opacity: 1; }
 }
+.bView{opacity:0;transform: translateY(20%)}
