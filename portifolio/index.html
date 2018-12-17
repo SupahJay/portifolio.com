@@ -149,7 +149,7 @@
             { root: null,  threshold: 0 });
             [...arguments].forEach( post =>{observer.observe(post);post.classList.add("bView");})
         }
-        scrollToView(...document.querySelectorAll(".post"),document.querySelector("main"))
+        scrollToView(...document.querySelectorAll(".post"))
         /*first way:
         create a aaray of the state of the categoties, re-check on every click, then scan all of the itens and include style if needed
         Second way: scan for the class activeted by the button and search and only change them
