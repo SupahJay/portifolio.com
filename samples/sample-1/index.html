@@ -3,34 +3,78 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>2018</title>
+    <title>Sample - Moabe Lima Gomes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <main>
-        <header><h1 style="padding:50px;text-align:center;font-size:2.3rem">Learn how the kids do it<br>Nows days</h1><img width="90%" src="img.svg" alt=""></header>
-        <svg width="100%" viewBox="0 0 1440 378" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <header>
+            <h1>Learn how the kids <br>do it Nows days</h1>
+            <img style="animation:float 5s linear infinite" width="90%" src="img.svg" alt="">
+        </header>
+        <svg class="wayv" width="100%" viewBox="0 0 1440 378" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M-1451 378L2892 378V328.875C2638.75 328.875 2670.4 9.07973 2356.85 35.558C2078.74 59.0435 2159.54 321.505 1785.53 328.875C1538.27 333.747 1687.53 60.2406 1385.42 62.8364C1083.3 65.4322 970.469 350.607 720.099 328.875C393.028 300.485 558.094 42.482 186.614 48.8857C-218.749 55.8735 -69.8003 328.875 -425.344 328.875C-746.576 328.875 -544.326 62.8364 -973.783 48.8857C-1403.24 34.935 -1154.57 330.42 -1451 328.875L-1451 378Z" fill="var(--bg)"/>
         </svg>            
-        <section>
-            <article class="show">
+        <section class="main">
+            <section class="whiteBlock">
+                <iframe class="yt" src="https://www.youtube.com/embed/wlICPbQ6eMA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section class="show">
                 <div>
-                    <div class="img"></div>
+                    <figcaption class="img"></figcaption>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, omnis vitae perferendis eveniet dolores ex inventore, exercitationem minus possimus deleniti voluptatum molestias, saepe at quis.</p>
                 </div>
                 <div>
-                    <div class="img"></div>
+                    <figcaption class="img"></figcaption>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, omnis vitae perferendis eveniet dolores ex inventore, exercitationem minus possimus deleniti voluptatum molestias, saepe at quis.</p>
                 </div>
                 <div>
-                    <div class="img"></div>
+                    <figcaption class="img"></figcaption>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, omnis vitae perferendis eveniet dolores ex inventore, exercitationem minus possimus deleniti voluptatum molestias, saepe at quis.</p>
                 </div>
-            </article>
+            </section>
+            <section class="blocks">
+                <article>
+                    <img class="img" src="" alt="">
+                    <div>
+                        <h1>Title for this Side</h1>
+                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="img" src="" alt="">
+                    <div>
+                        <h1>Title for this Section</h1>
+                        <p>  These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. Think of them merely as actors on a paper stage, in a performance devoid of content yet rich in form.</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="img" src="" alt="">
+                    <div>
+                        <h1>A nice Title for this one</h1>
+                        <p> That being the case, there is really no point in your continuing to read them. After all, you have many other things you should be doing. Who's paying you to waste this time, anyway?</p>
+                    </div>
+                </article>
+            </section>
+            <section class="reviews">
+                <h1>Don't trust only on us!</h1>
+                <p>Here I'll write some fake reviews tomorrow. Lorem it up!</p>
+            </section>
             <footer>Made with love by Jay</footer>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/gh/SupahJay/myworkflow@master/core.js"></script>
+    <script>
+    function scrollToView(){
+    observer = new IntersectionObserver( post => {
+        post.forEach( individual => {
+            if(individual.isIntersecting) { individual.target.style.opacity="";individual.target.classList.add("ani"); observer.unobserve(individual.target) }
+        })},{ root: null,  threshold: 0.55 });
+        tru=arguments;
+    [...arguments[0]].forEach( post =>{observer.observe(post);post.style.opacity="0";})
+    }
+    scrollToView([...document.querySelectorAll(".show>div"),...document.querySelectorAll("article")])
+    </script>
 </body>
 </html>
