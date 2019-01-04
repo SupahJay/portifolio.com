@@ -6,6 +6,7 @@
     <title>Sample - Moabe Lima Gomes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -14,7 +15,7 @@
             <img style="animation:float 5s linear infinite" width="90%" src="img.svg" alt="">
         </header>
         <svg class="wayv" width="100%" viewBox="0 0 1440 378" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M-1451 378L2892 378V328.875C2638.75 328.875 2670.4 9.07973 2356.85 35.558C2078.74 59.0435 2159.54 321.505 1785.53 328.875C1538.27 333.747 1687.53 60.2406 1385.42 62.8364C1083.3 65.4322 970.469 350.607 720.099 328.875C393.028 300.485 558.094 42.482 186.614 48.8857C-218.749 55.8735 -69.8003 328.875 -425.344 328.875C-746.576 328.875 -544.326 62.8364 -973.783 48.8857C-1403.24 34.935 -1154.57 330.42 -1451 328.875L-1451 378Z" fill="var(--bg)"/>
+            <path d="M-1451 378L2892 378V328.875C2638.75 328.875 2670.4 9.07973 2356.85 35.558C2078.74 59.0435 2159.54 321.505 1785.53 328.875C1538.27 333.747 1687.53 60.2406 1385.42 62.8364C1083.3 65.4322 970.469 350.607 720.099 328.875C393.028 300.485 558.094 42.482 186.614 48.8857C-218.749 55.8735 -69.8003 328.875 -425.344 328.875C-746.576 328.875 -544.326 62.8364 -973.783 48.8857C-1403.24 34.935 -1154.57 330.42 -1451 328.875L-1451 378Z" fill="#0068C8"/>
         </svg>            
         <section class="main">
             <section class="whiteBlock">
@@ -58,10 +59,42 @@
                 </article>
             </section>
             <section class="reviews">
-                <h1>Don't trust only on us!</h1>
-                <p>Here I'll write some fake reviews tomorrow. Lorem it up!</p>
+                <h1>What other people say about us</h1>
+                <style>
+                    article.review{max-width:800px;font-size:1.2rem;margin:5vh auto}
+                    article.review p:first-child:after, article.review p:first-child:before{content:'"';font-size: 2rem;font-family: Georgia, 'Times New Roman', Times, serif}
+                    .user{height: 55px;width:55px;border-radius:50%;display:block;margin:1rem auto .3rem;box-shadow: 1px 1px 6px #0000006e;}
+                </style>
+                <article class="review">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero iure, officia fuga dolore, sapiente necessitatibus cumque, unde modi omnis nobis tempore tenetur animi accusamus doloribus cupiditate nihil dolor nam.</p>
+                    <img src="" alt="" class="user img">
+                    <p>Ms. Walts</p>
+                </article>
+                <article class="review">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero iure, officia fuga dolore, sapiente necessitatibus cumque, unde modi omnis nobis tempore tenetur animi accusamus doloribus cupiditate nihil dolor nam.</p>
+                    <img src="" alt="" class="user img">
+                    <p>Ms. Walts</p>
+                </article>
+                <article class="review">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat libero iure, officia fuga dolore, sapiente necessitatibus cumque, unde modi omnis nobis tempore tenetur animi accusamus doloribus cupiditate nihil dolor nam.</p>
+                    <img src="" alt="" class="user img">
+                    <p>Ms. Walts</p>
+                </article>
             </section>
-            <footer>Made with love by Jay</footer>
+            &nbsp;
+        </section>
+        <svg width="100%" style="margin:-4.8px 0" viewBox="0 0 1606 57">
+            <path d="M1606 53.207C1150.96 81.4066 308.64 -60.654 0 53.207V0H1606V53.207Z" fill="rgb(84, 58, 213)"/>
+        </svg>
+        <section class="click">
+            <style>
+                p{max-width:800px;margin-bottom:1rem}
+                .click{margin:15vmin}
+                a{font-size: 1.2rem;padding:.5rem 1rem;margin:1rem auto;background:var(--bg);color:whitesmoke;border-radius:8px;text-decoration: none} 
+            </style>
+            <h1>This and much more.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, placeat sit! Magnam sint illum nesciunt provident libero repellendus, impedit veniam laboriosam hic tenetur dignissimos minima voluptates ea ipsum necessitatibus iste!</p>
+            <a href="#">Contact us</a>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/gh/SupahJay/myworkflow@master/core.js"></script>
