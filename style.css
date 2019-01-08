@@ -124,7 +124,9 @@ footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
 }
 /* postContainer and posts before the grid rule down there! */
 .postContainer{display:flex;flex-flow:wrap;flex-grow: 2;margin-left: 2.5vmin}
-.post{will-change: transform;
+.post{
+    will-change: transform;
+    overflow:hidden;
     display:inline-block;
     border-radius: 5px;
     background:white;
@@ -142,15 +144,15 @@ footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
     object-fit: cover;
     object-position: top
 }
-
-.post h2{margin:1rem auto;position:relative;z-index:1;}
+.post h2{margin:1rem;position:relative;z-index:1;text-align:left;}
 .post p{margin:1rem}
-.post h2::before{
+.post h2::after{
     content:"";
-    display:block;
-    position:absolute;
+    margin:0 1rem;
+    display:inline-block;
+    /* position:absolute;
     top:2px;
-    bottom:0;
+    bottom:0; */
     left:1rem;
     border-radius:50%;
     height:2rem;
@@ -160,11 +162,11 @@ footer.links .links {margin: auto; padding: 0 2rem; color: #ffffff} */
     color:transparent;
     font-size:1.6rem
 }
-.post h2:hover::before{color:#323232}
-.post.icon h2::before{background:var(--icon);content:"Icon";}
-.post.website h2::before{background:var(--website);content:"Website"}
-.post.image h2::before{background:var(--image);content:"Image"}
-.post.prototype h2::before{background:var(--prototype);content:"Prototype"}
+.post h2:hover::after{color:#323232}
+.post.icon h2::after{background:var(--icon);content:"Icon";}
+.post.website h2::after{background:var(--website);content:"Website"}
+.post.image h2::after{background:var(--image);content:"Image"}
+.post.prototype h2::after{background:var(--prototype);content:"Prototype"}
 /*------ Chips -----*/
 .filterChip{
     padding:.3rem .7rem;
